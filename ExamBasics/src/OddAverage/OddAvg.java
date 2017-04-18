@@ -19,7 +19,11 @@ public class OddAvg {
         counter++;
       }
     }
-    averageOfOddNumbers = totalOfOddNumbers / counter;
+    if (counter == 0) {
+      averageOfOddNumbers = 0;
+    } else {
+      averageOfOddNumbers = totalOfOddNumbers / counter;
+    }
     return averageOfOddNumbers;
   }
 
