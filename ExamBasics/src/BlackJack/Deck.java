@@ -7,8 +7,8 @@ import java.util.ArrayList;
  */
 public class Deck {
 
-  ArrayList<Card> deck;
   int numberOfCards, hearts, spades, diamonds, clubs;
+  ArrayList<Card> deck;
 
   public Deck(int wholeNumber) {
     deck = new ArrayList<Card>();
@@ -69,13 +69,6 @@ public class Deck {
     deck = tempDeck;
   }
 
-  @Override
-  public String toString() {
-    colorsInTheDeck();
-    return deck.size() + " cards - " + clubs + " Clubs, " + diamonds + " Diamonds, " + hearts
-        + " Hearts, " + spades + " Spades";
-  }
-
   public int randomCardValue() {
     int cardValue = (int) (Math.random() * 13 + 1);
     return cardValue;
@@ -89,5 +82,12 @@ public class Deck {
   public int randomGetACard(int deckSize) {
     int getThisCard = (int) (Math.random() * deckSize);
     return getThisCard;
+  }
+
+  @Override
+  public String toString() {
+    colorsInTheDeck();
+    return deck.size() + " cards - " + clubs + " Clubs, " + diamonds + " Diamonds, " + hearts
+        + " Hearts, " + spades + " Spades";
   }
 }
