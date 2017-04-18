@@ -18,6 +18,16 @@ public class Copy {
   private Copy(String[] args) {
     this.args = args;
   }
+
+  private void noArgument() {
+    System.out.println("The usage of the command is:");
+    System.out.println("copy [source] [destination]");
+  }
+
+
+
+
+
   public static void main(String[] args) {
 
 
