@@ -40,15 +40,15 @@ public class Deck {
     spades = 0;
     diamonds = 0;
     clubs = 0;
-    for (int i = 0; i < deck.size() ; i++) {
+    for (int i = 0; i < deck.size(); i++) {
       if (deck.get(i).color.contains("Hearts")) {
-        hearts ++;
+        hearts++;
       } else if (deck.get(i).color.contains("Spades")) {
-        spades ++;
+        spades++;
       } else if (deck.get(i).color.contains("Diamonds")) {
-        diamonds ++;
+        diamonds++;
       } else {
-        clubs ++;
+        clubs++;
       }
     }
   }
@@ -72,11 +72,12 @@ public class Deck {
   @Override
   public String toString() {
     colorsInTheDeck();
-    return deck.size() + " cards - " + clubs + " Clubs, " + diamonds + " Diamonds, " + hearts + " Hearts, " + spades + " Spades";
+    return deck.size() + " cards - " + clubs + " Clubs, " + diamonds + " Diamonds, " + hearts
+        + " Hearts, " + spades + " Spades";
   }
 
   public int randomCardValue() {
-    int cardValue = (int) (Math.random() * 13 +1);
+    int cardValue = (int) (Math.random() * 13 + 1);
     return cardValue;
   }
 
