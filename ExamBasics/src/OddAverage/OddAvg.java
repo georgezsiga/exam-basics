@@ -13,7 +13,7 @@ public class OddAvg {
   public double averageValueOfOddNumbers(int[] numbers) {
     int totalOfOddNumbers = 0;
     int counter = 0;
-    for (int i = 0; i < numbers.length; i += 2) {
+    for (int i = 0; i < numbers.length; i ++) {
       if (numbers[i] % 2 == 1) {
         totalOfOddNumbers += numbers[i];
         counter++;
