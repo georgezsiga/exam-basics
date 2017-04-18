@@ -55,8 +55,18 @@ public class Deck {
 
   public Card draw() {
     Card card = deck.get(0);
-    deck.remove(deck.get(0));
+    deck.remove(card);
     return card;
+  }
+
+  public void shuffleDeck() {
+    ArrayList<Card> tempDeck = new ArrayList<Card>();
+    while (deck.size() > 0) {
+      Card card = deck.get(randomGetACard(deck.size()));
+      tempDeck.add(card);
+      deck.remove(card);
+    }
+    deck = tempDeck;
   }
 
   @Override
@@ -73,5 +83,10 @@ public class Deck {
   public int randomCardColor() {
     int cardValue = (int) (Math.random() * 4);
     return cardValue;
+  }
+
+  public int randomGetACard(int deckSize) {
+    int getThisCard = (int) (Math.random() * deckSize);
+    return getThisCard;
   }
 }
