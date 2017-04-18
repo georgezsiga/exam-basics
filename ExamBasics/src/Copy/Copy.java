@@ -35,12 +35,21 @@ public class Copy {
     System.out.println("copy [source] [destination]");
   }
 
+  private void oneArgument() {
+    System.out.println("No destination provided");
+  }
+
 
 
 
 
   public static void main(String[] args) {
+    Copy argument = new Copy(args);
+    if (args.length == 0) {
+      argument.noArgument();
+    } else if (argument.contains(?.? && )) {
 
+    }
 
 
   }
