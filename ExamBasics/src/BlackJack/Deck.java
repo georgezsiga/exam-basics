@@ -53,10 +53,16 @@ public class Deck {
     }
   }
 
+  public Card draw() {
+    Card card = deck.get(0);
+    deck.remove(deck.get(0));
+    return card;
+  }
 
   @Override
   public String toString() {
-    return numberOfCards + " cards - " + clubs + " Clubs, " + diamonds + " Diamonds, " + hearts + " Hearts, " + spades + " Spades";
+    colorsInTheDeck();
+    return deck.size() + " cards - " + clubs + " Clubs, " + diamonds + " Diamonds, " + hearts + " Hearts, " + spades + " Spades";
   }
 
   public int randomCardValue() {
