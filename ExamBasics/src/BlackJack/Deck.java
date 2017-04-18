@@ -18,12 +18,17 @@ public class Deck {
 
   public void addCards() {
     if (numberOfCards < 4) {
-
+      for (int i = 0; i < numberOfCards ; i++) {
+        Card card = new Card(i, randomCardValue());
+        deck.add(card);
+      }
     } else {
       for (int i = 0; i < numberOfCards; i++) {
-        int randNum = randomCardValue();
-        int randColor = randomCardColor();
-        Card card = new Card(randColor, randNum);
+        if (i < 4) {
+          Card card = new Card(i, randomCardValue());
+          deck.add(card);
+        } else {
+        Card card = new Card(randomCardColor(), randomCardValue());
         deck.add(card);
       }
     }
