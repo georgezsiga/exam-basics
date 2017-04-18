@@ -23,17 +23,6 @@ public class Copy {
     this.args = args;
   }
 
-  private boolean contains(String argument) {
-    if (args.length > 0) {
-      for (String arg : args) {
-        if (arg.contains(argument)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-
   private void noArgument() {
     System.out.println("The usage of the command is:");
     System.out.println("copy [source] [destination]");
