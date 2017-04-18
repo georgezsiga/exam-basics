@@ -4,6 +4,7 @@ package BlackJack;
  * Created by georgezsiga on 4/18/17.
  */
 public class Card {
+
   String color, value;
 
   public Card(String color, String value) {
@@ -13,6 +14,6 @@ public class Card {
 
   @Override
   public String toString() {
-    return value + " " +  color;
+    return value + " " + color;
   }
 }
