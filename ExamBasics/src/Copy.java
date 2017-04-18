@@ -1,5 +1,3 @@
-package Copy;
-
 /**
  * Created by georgezsiga on 4/18/17.
  */
@@ -39,15 +37,12 @@ public class Copy {
     System.out.println("No destination provided");
   }
 
-
-
-
-
   public static void main(String[] args) {
     Copy argument = new Copy(args);
     if (args.length == 0) {
       argument.noArgument();
-    } else if (argument.contains(?.? && )) {
+    } else if (args.length == 1) {
+      argument.oneArgument();
 
     }
 
