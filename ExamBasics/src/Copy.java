@@ -44,9 +44,8 @@ public class Copy {
   }
 
   private void copyFile() {
-
-    String fileSource;
-    String destination;
+    String fileSource = args[0];
+    String destination = args[1];
     try {
       Path filePath = Paths.get(fileSource);
       List<String> lines = Files.readAllLines(filePath);
