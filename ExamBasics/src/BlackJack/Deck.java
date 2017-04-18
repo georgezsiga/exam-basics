@@ -17,14 +17,23 @@ public class Deck {
   }
 
   public void addCards() {
-    for (int i = 0; i < numberOfCards ; i++) {
-      Card card = new Card("Spade", "2");
-      deck.add(card);
+    if (numberOfCards < 4) {
+
+    } else {
+      for (int i = 0; i < numberOfCards; i++) {
+        Card card = new Card("Spade", "2");
+        deck.add(card);
+      }
     }
   }
 
   @Override
   public String toString() {
     return numberOfCards + " cards - ";
+  }
+
+  public int randomCardValue() {
+    int cardValue = (int) (Math.random() * 13);
+    return cardValue;
   }
 }
