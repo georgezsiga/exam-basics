@@ -29,6 +29,9 @@ public class Deck {
           deck.add(card);
         } else {
           Card card = new Card(randomCardColor(), randomCardValue());
+          while (deck.contains(card)) {
+            card = new Card(randomCardColor(), randomCardValue());
+          }
           deck.add(card);
         }
       }
