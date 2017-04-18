@@ -21,7 +21,9 @@ public class Deck {
 
     } else {
       for (int i = 0; i < numberOfCards; i++) {
-        Card card = new Card("Spade", "2");
+        int randNum = randomCardValue();
+        int randColor = randomCardColor();
+        Card card = new Card(randColor, randNum);
         deck.add(card);
       }
     }
@@ -33,7 +35,12 @@ public class Deck {
   }
 
   public int randomCardValue() {
-    int cardValue = (int) (Math.random() * 13);
+    int cardValue = (int) (Math.random() * 13 +1);
+    return cardValue;
+  }
+
+  public int randomCardColor() {
+    int cardValue = (int) (Math.random() * 4);
     return cardValue;
   }
 }
